@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  -moz-transition: 0.2s all ease-in-out;
+  -o-transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Raleway:300,300i,400,400i,700,700i';
+a {
+  color: #666;
+  text-decoration: none;
+  -moz-transition: 0.2s all ease-in-out;
+  -o-transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+a:hover, a:active {
+  color: #ff66ae;
+}
+
+body {
+  background: #f6f6f6;
+  color: #666;
+  font: 12px/1.5 'Raleway', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.calculator {
+/*   background: #fcfcfc; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  width: 500px;
+}
+.num-screen {
+/*   background: #ccc; */
+  display: block;
+  height: 100px;
+  position: relative;
+  width: 100%;
+}
+.num-screen input {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #ededed;
+  color: #666;
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  height: 100px;
+  letter-spacing: 2px;
+  padding: 0 50px;
+  text-align: right;
+  width: 100%;
+}
+.num-screen input::placeholder {
+  opacity: 0.4;
+}
+.calculator:hover .num-screen input, .num-screen input:focus {
+  border-color: #08d2c1;
+  outline: none;
+}
+.calc-ops {
+  display: flex;
+  width: 100%;
+}
+.num-pad {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+}
+.num-row {
+  display: flex;
+  width: 375px;
+}
+.calc-button {
+  background: transparent;
+  border: none;
+  color: #666;
+  font-size: 18px;
+  font-weight: 700;
+  height: 125px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 125px;
+}
+.calc-button:focus {
+  outline: none;
+}
+.calc-button::after {
+	content: '';
+/*   background: #ededed; */
+/*   background: rgba(237, 237, 237, 0.9); */
+  border: 3px solid #ededed;
+  height: 50px;
+	position: absolute;
+	top: 35px;
+	left: 35px;
+  -moz-transition: 0.2s all ease-in-out;
+  -o-transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  transform: scale3d(0, 0, 1);
+	width: 50px;
+  z-index: -1;
+}
+.calc-button:hover::after {
+  transform: scale3d(1.5, 1.5, 1);
+}
+.num-ops {
+  display: flex;
+  flex-direction: column;
+}
